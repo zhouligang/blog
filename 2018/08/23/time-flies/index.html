@@ -5,21 +5,22 @@
   
 
   
-  <title>解决hexo后台登录 | Hexo</title>
+  <title>解决hexo后台登录 | LeeCoder&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来。 都遇到了 h的exo 进程无法一直常驻后台 ssh 一关，博客进程就死掉了。这可就扎心了，因为我们不可能一直本地开着ssh吧。 于是经过一番大肆搜索，官方说用$ hexo s &amp;amp; 但是我在用的时候还是进程莫名奇妙的死掉了 今天给大家介绍一个方法 那就是 用pm2 来接">
+  <meta name="description" content="估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来 都遇到了 h的exo 进程无法一直常驻后台 ssh 一关，博客进程就死掉了。这可就扎心了，因为我们不可能一直本地开着ssh吧。 于是经过一番大肆搜索，官方说用$ hexo s &amp;amp; 但是我在用的时候还是进程莫名奇妙的死掉了 今天给大家介绍一个方法 那就是 用pm2 来接管">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决hexo后台登录">
 <meta property="og:url" content="http://yoursite.com/2018/08/23/time-flies/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来。 都遇到了 h的exo 进程无法一直常驻后台 ssh 一关，博客进程就死掉了。这可就扎心了，因为我们不可能一直本地开着ssh吧。 于是经过一番大肆搜索，官方说用$ hexo s &amp;amp; 但是我在用的时候还是进程莫名奇妙的死掉了 今天给大家介绍一个方法 那就是 用pm2 来接">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-24T01:46:27.681Z">
+<meta property="og:site_name" content="LeeCoder&#39;s Blog">
+<meta property="og:description" content="估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来 都遇到了 h的exo 进程无法一直常驻后台 ssh 一关，博客进程就死掉了。这可就扎心了，因为我们不可能一直本地开着ssh吧。 于是经过一番大肆搜索，官方说用$ hexo s &amp;amp; 但是我在用的时候还是进程莫名奇妙的死掉了 今天给大家介绍一个方法 那就是 用pm2 来接管">
+<meta property="og:locale" content="CHN">
+<meta property="og:updated_time" content="2018-08-24T03:20:36.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决hexo后台登录">
-<meta name="twitter:description" content="估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来。 都遇到了 h的exo 进程无法一直常驻后台 ssh 一关，博客进程就死掉了。这可就扎心了，因为我们不可能一直本地开着ssh吧。 于是经过一番大肆搜索，官方说用$ hexo s &amp;amp; 但是我在用的时候还是进程莫名奇妙的死掉了 今天给大家介绍一个方法 那就是 用pm2 来接">
+<meta name="twitter:description" content="估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来 都遇到了 h的exo 进程无法一直常驻后台 ssh 一关，博客进程就死掉了。这可就扎心了，因为我们不可能一直本地开着ssh吧。 于是经过一番大肆搜索，官方说用$ hexo s &amp;amp; 但是我在用的时候还是进程莫名奇妙的死掉了 今天给大家介绍一个方法 那就是 用pm2 来接管">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="LeeCoder&#39;s Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,8 +39,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">LeeCoder&#39;s Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Wonderful</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -86,14 +91,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来。</p>
+        <p>估计有好多朋友 和我一样，在最初部署成功hexo这个开源博客的时候，很高兴的用$ hexo server在服务上跑了起来</p>
 <p>都遇到了 h的exo 进程无法一直常驻后台 ssh 一关，博客进程就死掉了。这可就扎心了，因为我们不可能一直本地开着ssh吧。</p>
 <p>于是经过一番大肆搜索，官方说用$ hexo s &amp; 但是我在用的时候还是进程莫名奇妙的死掉了</p>
 <p>今天给大家介绍一个方法 那就是 用pm2 来接管hexo的进程</p>
 <p>开始操作<br>安装pm2</p>
 <p>$ npm  install -g pm2<br>1<br>写一个执行脚本<br>在博客根目录下面创建一个hexo_run.js</p>
-<p>//run<br>const { exec } = require(‘child_process’)<br>exec(‘hexo server’,(error, stdout, stderr) =&gt; {<br>        if(error){<br>                console.log(‘exec error: ${error}’)<br>                return<br>        }<br>        console.log(‘stdout: ${stdout}’);<br>        console.log(‘stderr: ${stderr}’);<br>})<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>运行脚本<br>在根目录下</p>
-<h1 id="pm2-start-hexo-run-js"><a href="#pm2-start-hexo-run-js" class="headerlink" title="pm2 start hexo_run.js"></a>pm2 start hexo_run.js</h1>
+<p>//run<br>const { exec } = require(‘child_process’)<br>exec(‘hexo server’,(error, stdout, stderr) =&gt; {<br>        if(error){<br>                console.log(‘exec error: ${error}’)<br>                return<br>        }<br>        console.log(‘stdout: ${stdout}’);<br>        console.log(‘stderr: ${stderr}’);<br>})</p>
+<p>运行脚本<br>在根目录下<br>pm2 start hexo_run.js</p>
+
       
     </div>
     <footer class="article-footer">
@@ -105,6 +111,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/08/23/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello My World
+        
+      </div>
+    </a>
   
   
     <a href="/2018/08/23/没错，这就是第一条博客/" id="article-nav-older" class="article-nav-link-wrap">
@@ -146,15 +161,15 @@
       <ul>
         
           <li>
+            <a href="/2018/08/23/hello-world/">Hello My World</a>
+          </li>
+        
+          <li>
             <a href="/2018/08/23/time-flies/">解决hexo后台登录</a>
           </li>
         
           <li>
             <a href="/2018/08/23/没错，这就是第一条博客/">没错，这就是第一条博客</a>
-          </li>
-        
-          <li>
-            <a href="/2018/08/23/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -169,7 +184,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 LeeCoder<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

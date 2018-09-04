@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>LeeCoder&#39;s Blog</title>
   
-  <subtitle>Wonderful</subtitle>
+  <subtitle>Welcome</subtitle>
   <link href="/myblog/atom.xml" rel="self"/>
   
   <link href="http://67.216.192.123:4000/myblog/"/>
